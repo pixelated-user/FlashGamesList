@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="https://pixelated-user.github.io/FlashEmu/css/embed.css">
+<link rel="stylesheet" href="/css/embed.css">
 <title>Bloxorz</title>
 <script language="javascript">
 	var GAME = {
@@ -50,15 +50,15 @@
 		loading: "Loading...",
 	};
 </script>
-<script src="https://pixelated-user.github.io/FlashEmu/js/flash_detect.js"></script>
-<script src="https://pixelated-user.github.io/FlashEmu/js/jquery.min.js"></script>
+<script src="/js/flash_detect.js"></script>
+<script src="/js/jquery.min.js"></script>
 
 
 </head>
 <body style="overflow:hidden;">
 <div class="embed-code" style="height:100vh">
 
-<link rel="stylesheet" href="https://pixelated-user.github.io/FlashEmu/waflash/waflash-style.css" />
+<link rel="stylesheet" href="/waflash/waflash-style.css" />
 <div id="waflashContainer">
 <canvas class="waflashCanvas" id="canvas" tabindex="1"></canvas>
 <div id="waflashStatus" style="display: none;">Playing...</div>
@@ -115,16 +115,16 @@
 		})());
 		import {
 			createWaflash
-		} from 'https://pixelated-user.github.io/FlashEmu/waflash/waflash-player.min.js';
+		} from '/waflash/waflash-player.min.js';
 		// Dose check flash player installed yet?
 		if(!FlashDetect.installed || GAME.reqEmulator == 'waflash'){
 			var _csrfToken = $('meta[name="csrf-token"]').attr('content');
-				$.get('https://pixelated-user.github.io/FlashEmu/waflash/waflash.js', {'_token': _csrfToken}, function(res){
+				$.get('/waflash/waflash.js', {'_token': _csrfToken}, function(res){
 					eval(res);
 				});
 		}
 	</script>
 </div> </div>
-<script src="https://pixelated-user.github.io/FlashEmu/js/embed.js"></script>
+<script src="/js/embed.js"></script>
 </body>
 </html>
